@@ -21,6 +21,9 @@ public class Kafe13 {
     
     public static void main(String[]args) {
         Menu( "Nino",  true);
+        System.out.println();
+        Menu( "Ria",  true);
+
     }
 }
   
