@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class RekapLaundry13{
+public class RekapLaundry13 {
 
     static Scanner input = new Scanner(System.in);
 
@@ -16,7 +16,6 @@ public class RekapLaundry13{
         "Kamis", "Jumat", "Sabtu"
     };
 
-    // Fungsi untuk menginput data
     static void inputData(int[][] data) {
         for (int i = 0; i < namaLayanan.length; i++) {
             System.out.println("\n" + namaLayanan[i]);
@@ -28,7 +27,6 @@ public class RekapLaundry13{
         }
     }
 
-    // Fungsi untuk menampilkan seluruh data
     static void tampilkanData(int[][] data) {
         System.out.println("\n========== REKAP DATA LAUNDRY ==========");
         System.out.printf("%-15s %-12s", "Layanan", "Harga/kg");
@@ -39,8 +37,7 @@ public class RekapLaundry13{
         System.out.println();
 
         for (int i = 0; i < namaLayanan.length; i++) {
-            System.out.printf("%-15s Rp%-10d",
-                    namaLayanan[i], harga[i]);
+            System.out.printf("%-15s Rp%-10d", namaLayanan[i], harga[i]);
 
             for (int j = 0; j < hari.length; j++) {
                 System.out.printf("%-10d", data[i][j]);
@@ -49,7 +46,6 @@ public class RekapLaundry13{
         }
     }
 
-    // Fungsi menghitung total berat setiap layanan
     static int totalPerLayanan(int[][] data, int idxLayanan) {
         int total = 0;
 
@@ -60,7 +56,6 @@ public class RekapLaundry13{
         return total;
     }
 
-    // Fungsi menampilkan layanan dengan total tertinggi
     static void layananTertinggi(int[][] data) {
         int max = 0;
         int indeks = 0;
@@ -79,7 +74,6 @@ public class RekapLaundry13{
         System.out.println("Total: " + max + " kg");
     }
 
-    // Fungsi mencari hari tersibuk
     static int hariTersibuk(int[][] data) {
         int max = 0;
         int indeksHari = 0;
@@ -100,7 +94,6 @@ public class RekapLaundry13{
         return indeksHari;
     }
 
-    // Fungsi menghitung pendapatan
     static void hitungPendapatan(int[][] data) {
         int totalPendapatan = 0;
 
@@ -119,13 +112,10 @@ public class RekapLaundry13{
     }
 
     public static void main(String[] args) {
-
         int[][] data = new int[4][6];
 
         inputData(data);
-
         tampilkanData(data);
-
         layananTertinggi(data);
 
         int indeks = hariTersibuk(data);
