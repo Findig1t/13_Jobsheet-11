@@ -8,6 +8,6 @@ public class PengunjungCafe13 {
     }
 
     public static void main(String[] args) {
-        daftarPengunjung(5, "Ali", "Budi", "Citra");
+        daftarPengunjung( "Ali", "Budi", 5);
     }
 }
