@@ -37,8 +37,8 @@ public class Kafe13 {
 
         int totalBayar = hitungTotalHarga13(pilihanMenu, banyakItem);
 
-        System.out.println("Total harga untuk pesanan Anda: Rp" + totalBayar);
-        
+        System.out.println("Proses Perhitungan Selesai" );
+
         sc.close();
     }
 }
